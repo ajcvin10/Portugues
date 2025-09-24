@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Um divertido quiz de Língua Portuguesa para testar seus conhecimentos!">
+    <meta name="author" content="Andre Carvalho">
+    <title>Quiz de Língua Portuguesa</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="start-screen" class="screen">
+            <h1>Quiz de Língua Portuguesa</h1>
+            <p>Prepare-se para testar seus conhecimentos e se divertir!</p>
+            <button id="start-button" class="action-button">Começar Quiz</button>
+        </div>
+
+        <div id="quiz-screen" class="screen hidden">
+            <h1>Quiz de Português</h1>
+            <div id="quiz-header">
+                <p>Questão: <span id="question-counter">0/0</span></p>
+                <p>Pontuação: <span id="score-counter">0</span></p>
+            </div>
+            <div class="question-area">
+                <h2 id="question-text"></h2>
+                <img id="question-image" src="" alt="Imagem da Questão" class="hidden">
+                
+                <!-- Container para questões de Múltipla Escolha -->
+                <div id="options-container" class="options-grid">
+                    <!-- Opções de resposta serão injetadas aqui pelo JS -->
+                </div>
+
+                <!-- Container para questões de Preenchimento (será preenchido dinamicamente pelo JS) -->
+                <div id="fill-in-the-blank-container">
+                    <!-- Aqui serão injetados os inputs/textareas para respostas de preenchimento -->
+                </div>
+                
+                <button id="hint-button" class="action-button hint-button hidden">Dica</button>
+                <div id="hint-text-container" class="hidden">
+                    <!-- Dicas serão injetadas aqui -->
+                </div>
+
+            </div>
+            
+            <div id="feedback-area" class="hidden">
+                <img id="feedback-gif" src="" alt="Feedback" class="hidden">
+                <p id="feedback-text" class="hidden"></p>
+            </div>
+            <button id="check-answer-button" class="action-button hidden">Verificar Resposta</button>
+            <button id="next-button" class="action-button hidden">Próxima Questão</button>
+        </div>
+
+        <div id="result-screen" class="screen hidden">
+            <h1>Parabéns, Andre!</h1>
+            <p>Você completou o quiz!</p>
+            <p>Sua pontuação final foi: <span id="final-score">0</span></p>
+            <button id="restart-button" class="action-button">Tentar Novamente</button>
+            <button id="generate-pdf-button" class="action-button">Gerar PDF com Respostas</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
